@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+
+typedef struct aluno
+{
+    char nome[50];
+    char curso[50];
+    char nMatricula[50];
+}alunoDados;
+int main(){
+    alunoDados alunoX;
+   
+
+    for (int i = 1;i <= 5; i++)
+    {
+        printf ("Insira os dados do aluno %i\n", i);
+        printf ("Nome: ");
+        fflush (stdin);
+        scanf ("%50[^\n]s", &alunoX.nome);
+        printf ("Curso: ");
+        fflush (stdin);
+        scanf ("%50[^\n]s", &alunoX.curso);
+        printf ("Matricula: ");
+        fflush (stdin);
+        scanf ("%50[^\n]s", &alunoX.nMatricula);
+        
+    }
+    
+}
