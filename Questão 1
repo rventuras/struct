@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+
+typedef struct dados
+{
+    char nome[50], endereco[50];
+    int idade;
+}dados;
+int main(){
+    setlocale(LC_ALL,"portuguese");
+    dados x;
+    printf ("Insira seu nome: ");
+    scanf ("%50[^\n]s", &x.nome);
+    printf ("Insira sua idade: ");
+    scanf("%i", &x.idade);
+    printf ("Insira o endereço: ");
+    fflush (stdin);
+    scanf ("%50[^\n]s", &x.endereco);
+
+    printf ("Dados\nNome: %s\nIdade: %i\nEndereço: %s", x.nome, x.idade, x.endereco);
+}
+
